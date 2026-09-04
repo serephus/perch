@@ -1,0 +1,22 @@
+name: 'perch'
+description: 'Fails when a feature branch is not based on the current base branch tip.'
+inputs:
+  feature:
+    description: 'feature branch name'
+    required: false
+    default: ${{ github.event.repository.head_ref }}
+  base:
+    description: 'base branch name'
+    required: false
+    default: ${{ github.event.repository.base_ref }}
+  token:
+    description: 'GitHub token used to read branch refs'
+    required: false
+    default: ${{ github.token }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.feature }}
+    - ${{ inputs.base }}
+    - ${{ inputs.token }}
