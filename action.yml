@@ -4,11 +4,11 @@ inputs:
   feature:
     description: 'feature branch name'
     required: false
-    default: ${{ github.event.repository.head_ref }}
+    default: ${{ github.head_ref }}
   base:
     description: 'base branch name'
     required: false
-    default: ${{ github.event.repository.base_ref }}
+    default: ${{ github.base_ref }}
   token:
     description: 'GitHub token used to read branch refs'
     required: false
