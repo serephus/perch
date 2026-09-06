@@ -10,6 +10,10 @@ For a pull request branch to pass, the current tip of the base branch must be an
 
 If the base branch has moved and the feature branch has not been rebased onto that new tip, the action fails.
 
+## Limitation
+
+The action can't rerun automatically when the base branch update.
+
 ## Usage
 
 ```yaml
