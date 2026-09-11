@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check that the PR branch is based on the latest base branch tip
-        uses: serephus/perch@v1
+        uses: serephus/perch@v0.1.0
         with:
           feature: ${{ github.head_ref }}
           base: ${{ github.base_ref }}
